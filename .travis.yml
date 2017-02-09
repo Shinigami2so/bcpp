@@ -10,7 +10,6 @@ before_install:
 - brew update
 - brew install python3
 - brew install mysql
-- mysql -e 'CREATE DATABASE IF NOT EXISTS edc character set utf8;'
 install:
 - sudo easy_install pip
 - pip install --upgrade pip
