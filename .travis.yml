@@ -1,14 +1,12 @@
 os: osx
 osx_image: xcode8.2
-sudo: false
+sudo: required
 language: generic
 services:
 - mysql
 - nginx
 before_install:
 - export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
-- sleep 3
 - brew update
 - brew install python3
 - mysql -e 'CREATE DATABASE IF NOT EXISTS edc character set utf8;'
